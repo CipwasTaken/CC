@@ -1,0 +1,139 @@
+:root {
+  --bg: #0f1115;
+  --card: #161a22;
+  --muted: #a6adbb;
+  --text: #e5e7eb;
+  --accent: #4f46e5;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --ok: #10b981;
+  --border: #252a36;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.nav {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.nav a {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+}
+.nav a.active {
+  background: var(--card);
+  border-color: var(--accent);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+.row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.grow {
+  flex: 1 1 320px;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0 0 16px;
+}
+h2 {
+  font-size: 18px;
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+.badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid var(--border);
+}
+.badge.critical {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: #7f1d1d;
+  color: #fecaca;
+}
+.badge.warning {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: #78350f;
+  color: #fde68a;
+}
+.badge.info {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: #1e3a8a;
+  color: #bfdbfe;
+}
+.badge.ok {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: #064e3b;
+  color: #bbf7d0;
+}
+
+input,
+select,
+textarea {
+  background: #0b0e14;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}

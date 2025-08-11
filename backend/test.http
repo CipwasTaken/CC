@@ -1,0 +1,31 @@
+### Home
+GET http://127.0.0.1:5000/
+
+### Health
+GET http://127.0.0.1:5000/healthz
+
+### Create alert
+POST http://127.0.0.1:5000/api/alerts
+Content-Type: application/json
+
+{
+  "type": "CPU Usage",
+  "message": "CPU usage over 90%",
+  "severity": "Critical"
+}
+
+### List alerts
+GET http://127.0.0.1:5000/api/alerts
+
+### Create diagnostic
+POST http://127.0.0.1:5000/api/diagnostics
+Content-Type: application/json
+
+{
+  "cpu_usage": 75.2,
+  "memory_usage": 66.1,
+  "disk_usage": 81.4
+}
+
+### List diagnostics
+GET http://127.0.0.1:5000/api/diagnostics
